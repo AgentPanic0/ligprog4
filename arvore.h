@@ -11,17 +11,17 @@ class Arvore
 {
     public:
         Arvore() {raiz = NULL;}
-        ~Arvore() {delete raiz;}
+        ~Arvore() {CaminharOrdemDelet(raiz);}
 
-        /*void CaminharOrdemDelet(NO *atual) 
+        void CaminharOrdemDelet(P *atual)
         {
             if (atual != NULL) 
             {
-                CaminharOrdem(atual->esq);
-                CaminharOrdem(atual->dir);
+                CaminharOrdemDelet(atual->esq);
+                CaminharOrdemDelet(atual->dir);
                 delete atual;
             }
-        }*/
+        }
 
         void CaminharOrdem(P* atual) 
         {

@@ -2,10 +2,10 @@
 CC = g++
 LD = g++
 
-CFLAGS = -Wall -std=c++11
-LFLAGS = -Wall
+CFLAGS = -Wall -std=c++11 -g
+LFLAGS = -Wall -g
 
-TRAB3OBJS = main.o sistema.o paciente.o
+TRAB4OBJS = main.o sistema.o paciente.o
 
 TRABALHOS = ./execTrab4
 
@@ -14,7 +14,7 @@ TRABALHOS = ./execTrab4
 
 all: $(TRABALHOS)
 
-execTrab3: $(TRAB4OBJS)
+execTrab4: $(TRAB4OBJS)
 	$(LD) $(LFLAGS) -o $@ $(TRAB4OBJS) -lm
 
 clean:
